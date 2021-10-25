@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  get text => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,49 +12,64 @@ class HomePage extends StatelessWidget {
         title: const Text("App1"),
         // backgroundColor: Colors.black12,
       ),
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[
-          Container(
-          height: 100,
-          width: 100,
-          alignment: Alignment.center,
-          margin: const EdgeInsets.all(20),
-          color: Colors.blue.shade50,
-          padding: const EdgeInsets.all(10),
-          child: const Text("Hii Mohammad  "),
-      ),
-      Container(
-          height: 100,
-          width: 100,
-          alignment: Alignment.center,
-          margin: const EdgeInsets.all(20),
-          color: Colors.blue.shade50,
-          padding: const EdgeInsets.all(10),
-          child: const Text("Hii Shoaib "),
-      ),
-      Container(
-          height: 100,
-          width: 100,
-          alignment: Alignment.center,
-          margin: const EdgeInsets.all(20),
-          color: Colors.blue.shade50,
-          padding: const EdgeInsets.all(10),
-          child: const Text("Hii Raza  "),
-      ),
-      Container(
-          height: 100,
-          width: 100,
-          alignment: Alignment.center,
-          margin: const EdgeInsets.all(20),
-          color: Colors.blue.shade50,
-          padding: const EdgeInsets.all(10),
-          child: const Text("Hii Ansari  "),
-      ),
-        ], 
-        ), 
+      body:Column(
+        children:const <Widget> [
+          Padding(
+            padding:  EdgeInsets.all(8.0),
+            child:   Center(
+              child:  Text(
+                " HELLO",
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.bold,
+                  backgroundColor: Colors.pink,
+                  shadows: [
+                    Shadow(
+                      color: Colors.black,
+                      offset: Offset(2.0, 4.0),
+                    ),
+                    
+                  ]
+                ),
+              ),
+            ),
+          ),
+          TextField(
+            decoration: InputDecoration(
+              border: InputBorder.none,
+
+              labelText: 'Name',
+              hintText: 'Enter your name : ',
+            ),
+          ),
+          TextField(
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              labelText: 'Age',
+              hintText: 'Enter your Age : ',
+            ),
+          ),
+          TextField(
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              labelText: 'Class',
+              hintText: 'Enter your class : ',
+            ),
+          ),
+          TextField(
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              
+              labelText: 'Section',
+              hintText: 'Enter your section : ',
+            ),
+          ),
+        ],
+        
+      ), 
+      
       
       drawer:const Drawer(
 
